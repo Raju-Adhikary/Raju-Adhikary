@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Raju Adhikary</title>
+    <style>
+     @font-face {
+        font-family: 'Myfont';
+        src: url('../style/Myfont-Regular.ttf.otf') format('truetype') /* Safari, Android, iOS */
+    }
+        body {
+            font-family: Myfont;
+            background-color: #f6f6f6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333333;
+            font-size: 24px;
+            margin-top: 0;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"],input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #cccccc;
+            resize: vertical;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #36f;
+            color: #ffffff;
+            padding: 10px 20px;
+            margin-top: 10px;
+            border-radius: 4px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Contact Us</h1>
+        <form action="javascript:window.location='/'" onsubmit="contactUs(this)">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+
+            <button class="btn" type="submit">Submit</button>
+        </form>
+    </div>
+    <script type="text/javascript" charset="utf-8">
+        function contactUs(o) {
+            let subject = `Message from ${o[0].value}`;
+            let body = `Name     :  ${o[0].value}%0D%0A Email Id :  ${o[1].value}%0D%0A Message  :  ${o[2].value}%0D%0A`;
+            window.location = `mailto:self@rajuadhikary.cf?cc=rajuadhikary633@gmail.com&subject=${subject}&body=${body}`;
+            return false;
+        }
+    </script>
+</body>
+
+</html>

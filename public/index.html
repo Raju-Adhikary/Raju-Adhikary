@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raju_Adhikary</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DG3FKJPWPC"></script>
+    <script>
+        //manage session
+        if (document.cookie.indexOf('visitedBefore=true') === -1) {
+            document.cookie = 'visitedBefore=true; expires=Fri, 31 Dec 9999 23:59:59 GMT';
+            self.visitedBefore = false;
+        } else {
+            self.visitedBefore = true;
+        }
+        //G - analytics
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-DG3FKJPWPC');
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <style>
+    @font-face {
+        font-family: 'Raju_Adhikary';
+        src: url('./style/Myfont-Regular.ttf.otf') format('truetype') /* Safari, Android, iOS */
+    }
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            font-family: Raju_Adhikary;
+            color: #333;
+        }
+
+        .loading-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #eff;
+            z-index: 99999999;
+            animation: fade-out 3s ease-in-out forwards;
+        }
+
+@keyframes fade-out {
+            70% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+        .parachute {
+            width: 200px;
+            height: 300px;
+            background-image: url('parachute.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: absolute;
+            bottom: -200px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            animation: fly 3s linear infinite;
+        }
+
+@keyframes fly {
+            0% {
+                bottom: -300px;
+                transform: translate(-50%, 0%) rotate(0deg);
+            }
+            50% {
+                transform: translate(-90%, 0%) rotate(-10deg);
+            }
+            70% {
+                transform: translate(10%, 0%) rotate(10deg);
+            }
+            100% {
+                bottom: 100%;
+                transform: translate(0%, 0%) rotate(-0deg);
+            }
+        }
+
+        header {
+            background-color: #2f80ed;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+
+        .profile-img {
+            display: block;
+            margin: 0 auto;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 5px solid #2f80ed;
+            overflow: hidden;
+            position: relative;
+            margin-top: 20px;
+            margin-bottom: 40px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+@keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(47,128,237, 0.4);
+            }
+
+            70% {
+                transform: scale(1.05);
+                box-shadow: 0 0 0 10px rgba(47,128,237, 0);
+            }
+
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(47,128,237, 0);
+            }
+        }
+
+
+        .profile-img img {
+            width: 100%;
+            height: auto;
+        }
+
+        .profile-img::before {
+            content: "";
+            position: absolute;
+            top: -10%;
+            left: -10%;
+            width: 120%;
+            height: 120%;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            z-index: -1;
+            transition: all 0.3s ease-in-out;
+            transform: scale(0);
+        }
+
+        .profile-img:hover::before {
+            transform: scale(1);
+        }
+
+        .profile-info {
+            text-align: center;
+        }
+
+        .profile-info h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .profile-info p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .social-links button {
+            display: block;
+            width: 40px;
+            height: 40px;
+            margin: 0 10px;
+            border-radius: 50%;
+            background-color: #fff;
+            color: #2f80ed;
+            line-height: 40px;
+            text-align: center;
+            font-size: 24px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .social-links button:hover {
+            background-color: #2f80ed;
+            color: #fff;
+        }
+
+        .action-buttons {
+            display: inline;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .action-buttons button {
+            background-color: #2f80ed;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 2px 5px;
+            border-radius: 10px;
+            min-width: 100px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .action-buttons button[disabled] , .action-buttons button[disabled]:hover {
+            background-color: #ddf;
+            color: #fff;
+            border: none;
+        }
+
+        .action-buttons button:hover {
+            background-color: #fff;
+            color: #2f80ed;
+            border: 2px solid #2f80ed;
+        }
+
+        footer {
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .credit {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            color: #666;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .credit:hover {
+            color: #2f80ed;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Wassup, peeps? 👋
+    </header>
+    <div class="loading-container">
+        <div class="parachute"></div>
+    </div>
+    <div class="container">
+        <div class="profile-info">
+            <div class="profile-img">
+                <img src="https://lh3.googleusercontent.com/-5Y4xsrp7jtw/AAAAAAAAAAI/AAAAAAAAAAA/APmPUbFw5OhtcVyf1lmLC0ECKT9wvzbxVA/s328-c/photo.jpg" alt="Profile Image">
+            </div>
+            <h1>Raju Adhikary</h1>
+            <p>
+                Engineer - Developer - Inventor
+            </p>
+        </div>
+
+        <div class="social-links">
+            <button href="https://www.facebook.com/RajuAdhikary366/"><i class="fab fa-facebook"></i></button>
+            <button href="https://mobile.twitter.com/Raju_Adhikary_"><i class="fab fa-twitter"></i></button>
+            <button href="https://www.linkedin.com/in/raju-adhikary-964220232"><i class="fab fa-linkedin"></i></button>
+            <button href="https://github.com/Raju-Adhikary"><i class="fab fa-github"></i></button>
+            <button href="mailto:self@rajuadhikary.cf?cc=rajuadhikary633@gmail.com&subject=Interacting with Raju Adhikary&body=Start Writting here...%0A-----------------------------%0A"><i class="fa fa-envelope"></i></button>
+        </div>
+        <div class="action-buttons">
+            <button data-liked="false" id="like-button"><div>
+                <i class="far fa-thumbs-up"></i>
+            </div>
+            </button>
+            <button href="/contact-us/">Contact Me</button>
+            <button href="/cv/">Learn More About Me</button>
+        </div>
+
+    </div>
+
+    <footer>
+        <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="rajuadhikary" data-description="Support me on Buy me a coffee!" data-message="" data-color="#0FF" data-position="Right" data-x_margin="25" data-y_margin="25"></script>
+        <div href="https://rajuadhikary.cf" class="credit">
+            <p>
+                &copy;Designed and developed by Raju Adhikary
+            </p>
+        </div>
+    </footer>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import {
+            initializeApp
+        } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyC3pkf8CgSd_jd8wMUaOVtk2LnLhpykzBU",
+            authDomain: "portfolio-raju.firebaseapp.com",
+            projectId: "portfolio-raju",
+            storageBucket: "portfolio-raju.appspot.com",
+            messagingSenderId: "254025371218",
+            appId: "1:254025371218:web:234ba8ac09de7f606ed98b"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        self.fb = app;
+    </script>
+    <script type="text/javascript" charset="utf-8">
+        // Code for the like button functionality
+        const likeButton = $('#like-button');
+        let liked = true; // delete after adding database
+        let likes = 1790;
+
+        function likeUp() {
+            likes++;
+            likeButton.innerHTML = `<i class="far fa-thumbs-up"></i> ${Math.formatNumber(likes)}`;
+        }
+        likeButton.addEventListener('click', () => {
+            if (liked) {
+                likeUp();
+                $('#like-button>i').classList.replace('far', 'fa');
+                liked = false;
+            } else {
+                likes -= 2;
+                likeUp();
+                $('#like-button>i').classList.replace('fa', 'far');
+                liked = true;
+            }
+        });
+        let hs883u = setInterval(function() {
+            likes < Math.round(Math.random()*500)+likes-2? likeUp(): clearInterval(hs883u);
+        }, 20)
+
+
+
+
+        Math.formatNumber = (number) => {
+            const suffixes = ['', 'K', 'M', 'B', 'T', 'Q', 'S', 'O', 'N', 'D'];
+            const suffixNum = Math.floor(('' + number).length / 3);
+
+            let shortNumber = parseFloat((suffixNum != 0 ? (number / Math.pow(1000, suffixNum)): number).toPrecision(2));
+            if (shortNumber % 1 !== 0) {
+                shortNumber = shortNumber.toFixed(1);
+            }
+            return shortNumber + suffixes[suffixNum];
+        }
+        $("*[href]").forEach(function(button) {
+            const href = button.getAttribute("href");
+            button.addEventListener("click", function() {
+                window.location.href = href;
+            });
+        });
+        function $(s) {
+            const e = document.querySelectorAll(s);
+
+            if (e.length === 0) {
+                return null;
+            } else if (e.length === 1) {
+                return e[0];
+            } else {
+                return e;
+            }
+        }
+    </script>
+</body>
+</html>

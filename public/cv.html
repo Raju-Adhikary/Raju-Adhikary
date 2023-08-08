@@ -1,0 +1,338 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Raju Adhikary</title>
+    <style type="text/css" media="all">
+        /* Reset default browser styles */
+        body,
+        h1, h2, h3, h4, h5, h6,
+        p, ul, li,
+        table, tr, th, td,
+        input, textarea,
+        button {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            max-width: 100vw!important;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f1f1;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        p{
+            text-align: justify;
+        }
+
+        table {
+            max-width: 100%;
+            margin-bottom: 20px;
+        }
+
+        td, th {
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        
+        #contact table td{
+            padding: 10px;
+            border: 0px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-bottom: 10px;
+        }
+
+        li {
+            margin-bottom: 5px;
+            margin-left: 15px;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
+        canvas {
+            display: block;
+            max-width: 100%;
+        }
+
+        a {
+            color: #337ab7;
+            text-decoration: none;
+        }
+        
+        .my_photo{
+            border-radius: 50%;
+            margin: auto;
+            width: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #337ab7;
+            color: #fff;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .btn:hover {
+            background-color: #23527c;
+        }
+
+        #copywrite {
+            text-align: center;
+            color: #999;
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+
+@media screen and (max-width: 768px) {
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+
+            td, th {
+                
+            }
+
+            #copywrite {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td width="30%">
+                <img class="my_photo" src="https://lh3.googleusercontent.com/-5Y4xsrp7jtw/AAAAAAAAAAI/AAAAAAAAAAA/APmPUbFw5OhtcVyf1lmLC0ECKT9wvzbxVA/s328-c/photo.jpg" alt="Profile Photo" />
+                <canvas onclick="animateSign = !animateSign;animatePath(data);" id="signCanvas"></canvas>
+            </td>
+            <td>
+                <h2>Raju Adhikary</h2>
+                <p>
+                    I am a motivated and hardworking individual with a strong background in electrical engineering and refrigeration and air conditioning. I have additional skills in programming languages like HTML, CSS, JS, C++, and Python and have experience working on various projects.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td id="intro" colspan="2">
+                <h3>Who I am</h3>
+                <p>My name Raju Adhikary. I'm from Chakdaha, Nadia, West Bengal, India.</p><br />
+                <p>&nbsp;Hi, I am a Diploma Electrical Engineering Student at Ranaghat Govt. Polytechnic. Currently working as a Full-time student and a contributor in open source community. I am a hardworking creative person and a team player. I also made my own projects with different programming language and many IOT based boards or microcontroller. In my leisure time I like to explore more about electrical - electronics devices and also learning more about deferent programming language. My hobby is research with them and trying to make something incredible. In future I would like to see my hobby(exploring about technology)  as my job.</p>
+            </td>
+        </tr>
+        <tr>
+            <td id="education" colspan="2">
+                <h3>Education</h3>
+                <table border="1">
+                    <tr>
+                        <th>Level</th>
+                        <th>Institution</th>
+                        <th>Field of Study</th>
+                        <th>Year</th>
+                        <th>Marks</th>
+                    </tr>
+                    <tr>
+                        <td>Trade Certificate</td>
+                        <td>Fulia Govt. ITI</td>
+                        <td>Refrigeration and Air Conditioning Technician</td>
+                        <td>2020-2022</td>
+                        <td>91 %</td>
+                    </tr>
+                    <tr>
+                        <td>Secondary</td>
+                        <td>Chakdaha Bapuji Vidyamandir</td>
+                        <td>Madhyamik</td>
+                        <td>2020</td>
+                        <td>52 %</td>
+                    </tr>
+                    <tr>
+                        <td>Diploma</td>
+                        <td>Ranaghat Govt. Polytechnic</td>
+                        <td>Electrical Engineering</td>
+                        <td>2022-Present</td>
+                        <td>-</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td id="skills" colspan="2">
+                <h3>Skills</h3>
+                <ul>
+                    <li>Industrial safety measures</li>
+                    <li>Web Development</li>
+                    <li>microcontroller programming for IOT</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <h3>Projects</h3>
+                <ul>
+                    <li>Development of a website for AITT Mock Test using HTML, CSS, and JavaScript (2021)</li>
+                    <li>CNC Plotter System using Esp32 board</li>
+                    <li>File Changes Monitoring System using Python</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td id="contact" colspan="2">
+                <h3>Contact</h3>
+                <table border="1">
+                    <tr>
+                        <td>Email Id </td>
+                        <td>:</td>
+                        <td>
+                            <a href="mailto:self@rajuadhikary.cf">self@rajuadhikary.cf</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Phone </td>
+                        <td>:</td>
+                        <td><a href="tel:8609463193">8609463193</a></td>
+                    </tr>
+                    <tr>
+                        <td>Address </td>
+                        <td>:</td>
+                        <td>Chakdaha, Nadia , West Bengal, India</td>
+                    </tr>
+                    <tr>
+                        <td>Website </td>
+                        <td>:</td>
+                        <td><a href="https://rajuadhikary.cf/">https://rajuadhikary.cf/</a></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <h3>Send Mail</h3>
+                <table border="0">
+                    <form action="mailto:self@rajuadhikary.cf" method="get" onsubmit="contactUs(this)">
+                        <tr>
+                            <td>
+                            <label for="name">Name:</label>
+                            </td>
+                            <td>
+                            <input type="text" id="name" name="name" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <label for="email">Email:</label>
+                            </td>
+                            <td>
+                            <input type="email" id="email" name="email" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <label for="body">Message:</label>
+                            </td>
+                            <td>
+                            <textarea id="message" name="body" rows="6" cols="23" required></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <button class="btn" type="submit">Submit</button>
+                            </td>
+                        </tr>
+                        <tr hidden>
+                            <td>
+                                <input type="text" name="cc" value="rajuadhikary633@gmail.com" hidden="true" />
+                                <input type="text" name="subject" value="You_are_intracting_with_Raju_Adhikary" hidden="true" />
+                            </td>
+                        </tr>
+                        </form>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <br />
+    <button onclick="window.print()" class="btn">Print</button>
+    <button onclick="window.location='/contact-us/'" class="btn">Contact</button>
+    <div id="copywrite">
+        &copy;Designed and developed by <a href="https://rajuadhikary.cf">Raju Adhikary</a>
+    </div>
+    <script type="text/javascript" charset="utf-8">
+        const data = [{"x":23,"y":94},{"x":23,"y":51},{"x":15,"y":49},{"x":17,"y":48},{"x":18,"y":46},{"x":21,"y":44},{"x":23,"y":42},{"x":26,"y":41},{"x":29,"y":42},{"x":32,"y":43},{"x":33,"y":44},{"x":35,"y":47},{"x":36,"y":48},{"x":37,"y":51},{"x":38,"y":54},{"x":38,"y":55},{"x":38,"y":57},{"x":38,"y":60},{"x":37,"y":63},{"x":36,"y":65},{"x":34,"y":68},{"x":32,"y":70},{"x":31,"y":71},{"x":28,"y":71},{"x":27,"y":71},{"x":27,"y":71},{"x":26,"y":71},{"x":26,"y":70},{"x":25,"y":70},{"x":25,"y":69},{"x":25,"y":69},{"x":26,"y":70},{"x":26,"y":70},{"x":26,"y":70},{"x":27,"y":72},{"x":28,"y":73},{"x":30,"y":76},{"x":31,"y":77},{"x":32,"y":81},{"x":33,"y":83},{"x":34,"y":85},{"x":34,"y":86},{"x":34,"y":87},{"x":34,"y":88},{"x":35,"y":91},{"x":35,"y":92},{"x":35,"y":92},{"x":36,"y":93},{"x":36,"y":94},{"x":36,"y":94},{"x":37,"y":94},{"x":37,"y":95},{"x":37,"y":95},{"x":37,"y":94},{"x":37,"y":94},{"x":37,"y":93},{"x":38,"y":91},{"x":38,"y":89},{"x":40,"y":85},{"x":40,"y":84},{"x":41,"y":82},{"x":43,"y":80},{"x":43,"y":79},{"x":44,"y":78},{"x":45,"y":78},{"x":46,"y":78},{"x":47,"y":78},{"x":47,"y":78},{"x":48,"y":78},{"x":48,"y":78},{"x":49,"y":78},{"x":49,"y":78},{"x":49,"y":78},{"x":48,"y":78},{"x":48,"y":77},{"x":47,"y":77},{"x":46,"y":77},{"x":46,"y":77},{"x":44,"y":77},{"x":43,"y":78},{"x":43,"y":78},{"x":41,"y":80},{"x":40,"y":81},{"x":38,"y":84},{"x":37,"y":85},{"x":37,"y":87},{"x":38,"y":90},{"x":38,"y":91},{"x":39,"y":92},{"x":41,"y":94},{"x":41,"y":94},{"x":42,"y":94},{"x":43,"y":94},{"x":45,"y":93},{"x":46,"y":92},{"x":47,"y":91},{"x":47,"y":90},{"x":48,"y":87},{"x":48,"y":85},{"x":49,"y":82},{"x":49,"y":81},{"x":49,"y":79},{"x":49,"y":77},{"x":49,"y":76},{"x":50,"y":76},{"x":50,"y":76},{"x":50,"y":77},{"x":50,"y":77},{"x":50,"y":77},{"x":50,"y":80},{"x":50,"y":82},{"x":50,"y":86},{"x":50,"y":88},{"x":50,"y":90},{"x":51,"y":92},{"x":51,"y":93},{"x":51,"y":93},{"x":51,"y":93},{"x":51,"y":94},{"x":53,"y":94},{"x":53,"y":94},{"x":56,"y":93},{"x":57,"y":93},{"x":60,"y":91},{"x":61,"y":89},{"x":62,"y":87},{"x":63,"y":85},{"x":63,"y":83},{"x":63,"y":79},{"x":63,"y":76},{"x":63,"y":74},{"x":64,"y":73},{"x":64,"y":72},{"x":64,"y":70},{"x":64,"y":69},{"x":64,"y":70},{"x":63,"y":72},{"x":63,"y":75},{"x":63,"y":78},{"x":63,"y":84},{"x":63,"y":86},{"x":63,"y":92},{"x":63,"y":93},{"x":63,"y":96},{"x":63,"y":97},{"x":62,"y":99},{"x":62,"y":99},{"x":62,"y":100},{"x":62,"y":100},{"x":61,"y":100},{"x":61,"y":100},{"x":59,"y":100},{"x":58,"y":100},{"x":57,"y":99},{"x":56,"y":98},{"x":56,"y":97},{"x":56,"y":97},{"x":57,"y":96},{"x":58,"y":95},{"x":58,"y":95},{"x":61,"y":94},{"x":63,"y":93},{"x":65,"y":91},{"x":68,"y":88},{"x":71,"y":86},{"x":72,"y":84},{"x":73,"y":81},{"x":73,"y":78},{"x":73,"y":77},{"x":73,"y":74},{"x":74,"y":72},{"x":74,"y":71},{"x":74,"y":69},{"x":74,"y":69},{"x":74,"y":68},{"x":74,"y":71},{"x":74,"y":73},{"x":73,"y":79},{"x":73,"y":82},{"x":73,"y":84},{"x":73,"y":86},{"x":73,"y":88},{"x":73,"y":89},{"x":74,"y":90},{"x":75,"y":91},{"x":76,"y":91},{"x":77,"y":91},{"x":79,"y":91},{"x":82,"y":89},{"x":83,"y":88},{"x":85,"y":86},{"x":86,"y":80},{"x":87,"y":77},{"x":87,"y":73},{"x":88,"y":72},{"x":88,"y":69},{"x":88,"y":69},{"x":88,"y":68},{"x":88,"y":67},{"x":88,"y":67},{"x":88,"y":67},{"x":88,"y":68},{"x":88,"y":71},{"x":88,"y":73},{"x":87,"y":79},{"x":87,"y":81},{"x":87,"y":84},{"x":87,"y":86},{"x":87,"y":87},{"x":88,"y":88},{"x":89,"y":88},{"x":89,"y":89},{"x":90,"y":89},{"x":91,"y":90},{"x":92,"y":90},{"x":94,"y":90},{"x":94,"y":91},{"x":96,"y":91},{"x":98,"y":91},{"x":100,"y":91},{"x":102,"y":92},{"x":104,"y":92},{"x":105,"y":92},{"x":106,"y":92},{"x":107,"y":92},{"x":108,"y":92},{"x":109,"y":92},{"x":110,"y":92},{"x":110,"y":92},{"x":112,"y":92},{"x":112,"y":93},{"x":128,"y":90},{"x":131,"y":86},{"x":132,"y":82},{"x":133,"y":79},{"x":135,"y":73},{"x":136,"y":70},{"x":138,"y":65},{"x":139,"y":62},{"x":140,"y":60},{"x":140,"y":59},{"x":140,"y":59},{"x":141,"y":58},{"x":141,"y":58},{"x":141,"y":60},{"x":141,"y":62},{"x":142,"y":65},{"x":142,"y":69},{"x":144,"y":78},{"x":146,"y":85},{"x":146,"y":87},{"x":147,"y":88},{"x":147,"y":89},{"x":147,"y":91},{"x":147,"y":91},{"x":147,"y":92},{"x":146,"y":90},{"x":142,"y":86},{"x":137,"y":79},{"x":136,"y":77},{"x":135,"y":76},{"x":134,"y":76},{"x":134,"y":76},{"x":133,"y":76},{"x":133,"y":76},{"x":132,"y":76},{"x":133,"y":76},{"x":133,"y":76},{"x":134,"y":76},{"x":134,"y":75},{"x":136,"y":75},{"x":138,"y":74},{"x":145,"y":73},{"x":148,"y":72},{"x":149,"y":72},{"x":152,"y":71},{"x":152,"y":71},{"x":153,"y":71},{"x":153,"y":71},{"x":153,"y":71},{"x":154,"y":71},{"x":153,"y":71},{"x":163,"y":73},{"x":160,"y":72},{"x":160,"y":72},{"x":158,"y":72},{"x":157,"y":73},{"x":157,"y":73},{"x":156,"y":73},{"x":154,"y":75},{"x":153,"y":76},{"x":152,"y":79},{"x":152,"y":80},{"x":151,"y":84},{"x":151,"y":85},{"x":151,"y":88},{"x":151,"y":89},{"x":153,"y":90},{"x":154,"y":90},{"x":155,"y":90},{"x":158,"y":90},{"x":160,"y":89},{"x":162,"y":87},{"x":163,"y":86},{"x":164,"y":82},{"x":165,"y":81},{"x":165,"y":77},{"x":165,"y":75},{"x":165,"y":73},{"x":165,"y":69},{"x":166,"y":65},{"x":166,"y":63},{"x":166,"y":62},{"x":166,"y":59},{"x":165,"y":58},{"x":165,"y":58},{"x":165,"y":57},{"x":165,"y":57},{"x":165,"y":58},{"x":165,"y":59},{"x":165,"y":63},{"x":166,"y":66},{"x":166,"y":70},{"x":166,"y":81},{"x":166,"y":84},{"x":166,"y":87},{"x":166,"y":88},{"x":166,"y":89},{"x":166,"y":90},{"x":166,"y":91},{"x":166,"y":90},{"x":179,"y":87},{"x":180,"y":83},{"x":180,"y":82},{"x":180,"y":80},{"x":180,"y":75},{"x":180,"y":69},{"x":180,"y":67},{"x":179,"y":62},{"x":179,"y":60},{"x":179,"y":58},{"x":179,"y":55},{"x":179,"y":54},{"x":179,"y":53},{"x":179,"y":54},{"x":179,"y":55},{"x":179,"y":58},{"x":180,"y":61},{"x":181,"y":70},{"x":182,"y":76},{"x":182,"y":79},{"x":182,"y":82},{"x":181,"y":83},{"x":182,"y":84},{"x":182,"y":84},{"x":182,"y":85},{"x":182,"y":85},{"x":181,"y":84},{"x":181,"y":84},{"x":181,"y":81},{"x":181,"y":80},{"x":181,"y":78},{"x":182,"y":76},{"x":183,"y":73},{"x":183,"y":72},{"x":185,"y":69},{"x":186,"y":68},{"x":187,"y":67},{"x":188,"y":68},{"x":191,"y":71},{"x":191,"y":73},{"x":192,"y":78},{"x":192,"y":83},{"x":192,"y":84},{"x":192,"y":85},{"x":192,"y":87},{"x":193,"y":88},{"x":193,"y":88},{"x":193,"y":88},{"x":201,"y":87},{"x":204,"y":84},{"x":205,"y":82},{"x":208,"y":79},{"x":208,"y":77},{"x":209,"y":73},{"x":210,"y":72},{"x":210,"y":69},{"x":210,"y":67},{"x":210,"y":65},{"x":210,"y":64},{"x":210,"y":63},{"x":210,"y":62},{"x":210,"y":62},{"x":210,"y":62},{"x":210,"y":63},{"x":210,"y":64},{"x":210,"y":66},{"x":210,"y":68},{"x":210,"y":71},{"x":210,"y":74},{"x":210,"y":79},{"x":211,"y":81},{"x":211,"y":83},{"x":211,"y":84},{"x":212,"y":86},{"x":212,"y":87},{"x":213,"y":87},{"x":213,"y":87},{"x":213,"y":88},{"x":213,"y":87},{"x":214,"y":87},{"x":225,"y":85},{"x":226,"y":80},{"x":227,"y":77},{"x":227,"y":72},{"x":227,"y":70},{"x":227,"y":66},{"x":227,"y":64},{"x":227,"y":62},{"x":227,"y":59},{"x":227,"y":58},{"x":227,"y":57},{"x":227,"y":57},{"x":227,"y":57},{"x":227,"y":58},{"x":227,"y":58},{"x":227,"y":59},{"x":227,"y":62},{"x":227,"y":64},{"x":227,"y":68},{"x":227,"y":70},{"x":227,"y":72},{"x":227,"y":73},{"x":227,"y":74},{"x":227,"y":75},{"x":227,"y":75},{"x":227,"y":76},{"x":227,"y":76},{"x":227,"y":76},{"x":228,"y":76},{"x":228,"y":75},{"x":229,"y":74},{"x":230,"y":72},{"x":232,"y":69},{"x":233,"y":68},{"x":234,"y":67},{"x":234,"y":67},{"x":235,"y":66},{"x":235,"y":66},{"x":236,"y":65},{"x":236,"y":65},{"x":236,"y":65},{"x":236,"y":65},{"x":236,"y":66},{"x":236,"y":66},{"x":236,"y":66},{"x":233,"y":70},{"x":232,"y":72},{"x":230,"y":73},{"x":229,"y":74},{"x":229,"y":75},{"x":228,"y":75},{"x":228,"y":75},{"x":228,"y":75},{"x":227,"y":76},{"x":227,"y":76},{"x":228,"y":76},{"x":228,"y":76},{"x":228,"y":76},{"x":228,"y":76},{"x":228,"y":76},{"x":230,"y":76},{"x":231,"y":77},{"x":234,"y":79},{"x":235,"y":80},{"x":236,"y":82},{"x":237,"y":84},{"x":237,"y":85},{"x":238,"y":85},{"x":238,"y":86},{"x":238,"y":86},{"x":238,"y":86},{"x":239,"y":86},{"x":248,"y":77},{"x":249,"y":75},{"x":249,"y":73},{"x":250,"y":72},{"x":251,"y":68},{"x":252,"y":67},{"x":253,"y":66},{"x":255,"y":65},{"x":256,"y":64},{"x":256,"y":63},{"x":257,"y":63},{"x":256,"y":63},{"x":256,"y":64},{"x":255,"y":64},{"x":254,"y":64},{"x":251,"y":66},{"x":250,"y":68},{"x":248,"y":70},{"x":246,"y":74},{"x":246,"y":76},{"x":246,"y":76},{"x":246,"y":77},{"x":246,"y":79},{"x":246,"y":80},{"x":247,"y":81},{"x":247,"y":82},{"x":248,"y":83},{"x":248,"y":83},{"x":249,"y":83},{"x":250,"y":83},{"x":252,"y":81},{"x":254,"y":79},{"x":256,"y":76},{"x":257,"y":75},{"x":257,"y":74},{"x":257,"y":72},{"x":257,"y":70},{"x":257,"y":66},{"x":256,"y":65},{"x":256,"y":65},{"x":256,"y":64},{"x":256,"y":63},{"x":257,"y":63},{"x":257,"y":63},{"x":257,"y":63},{"x":257,"y":63},{"x":257,"y":64},{"x":256,"y":66},{"x":256,"y":68},{"x":256,"y":70},{"x":255,"y":72},{"x":255,"y":73},{"x":255,"y":78},{"x":255,"y":79},{"x":256,"y":79},{"x":256,"y":80},{"x":257,"y":81},{"x":257,"y":81},{"x":258,"y":82},{"x":259,"y":82},{"x":260,"y":82},{"x":260,"y":82},{"x":261,"y":81},{"x":261,"y":81},{"x":261,"y":81},{"x":267,"y":78},{"x":269,"y":75},{"x":270,"y":74},{"x":270,"y":72},{"x":270,"y":71},{"x":270,"y":70},{"x":271,"y":69},{"x":271,"y":67},{"x":271,"y":66},{"x":271,"y":64},{"x":270,"y":64},{"x":270,"y":63},{"x":270,"y":63},{"x":269,"y":63},{"x":268,"y":63},{"x":266,"y":63},{"x":266,"y":63},{"x":265,"y":63},{"x":265,"y":64},{"x":265,"y":64},{"x":266,"y":65},{"x":266,"y":65},{"x":266,"y":65},{"x":267,"y":65},{"x":267,"y":65},{"x":269,"y":65},{"x":272,"y":64},{"x":272,"y":64},{"x":273,"y":64},{"x":275,"y":64},{"x":275,"y":64},{"x":276,"y":63},{"x":277,"y":63},{"x":277,"y":63},{"x":278,"y":63},{"x":278,"y":63},{"x":278,"y":63},{"x":278,"y":63},{"x":278,"y":64},{"x":278,"y":65},{"x":278,"y":67},{"x":277,"y":69},{"x":277,"y":74},{"x":277,"y":75},{"x":277,"y":76},{"x":277,"y":77},{"x":277,"y":78},{"x":277,"y":78},{"x":277,"y":79},{"x":277,"y":79},{"x":278,"y":80},{"x":278,"y":81},{"x":278,"y":81},{"x":278,"y":81},{"x":278,"y":81},{"x":278,"y":81},{"x":279,"y":81},{"x":279,"y":80},{"x":281,"y":80},{"x":282,"y":79},{"x":285,"y":78},{"x":287,"y":76},{"x":287,"y":74},{"x":288,"y":71},{"x":288,"y":70},{"x":288,"y":68},{"x":288,"y":67},{"x":288,"y":66},{"x":288,"y":65},{"x":287,"y":64},{"x":287,"y":64},{"x":287,"y":64},{"x":287,"y":64},{"x":287,"y":65},{"x":287,"y":66},{"x":288,"y":67},{"x":288,"y":69},{"x":288,"y":70},{"x":289,"y":72},{"x":289,"y":72},{"x":289,"y":73},{"x":289,"y":73},{"x":291,"y":73},{"x":291,"y":73},{"x":294,"y":72},{"x":295,"y":71},{"x":296,"y":70},{"x":297,"y":69},{"x":298,"y":68},{"x":299,"y":67},{"x":299,"y":67},{"x":299,"y":67},{"x":299,"y":68},{"x":298,"y":69},{"x":297,"y":73},{"x":296,"y":77},{"x":295,"y":79},{"x":295,"y":81},{"x":293,"y":85},{"x":292,"y":88},{"x":291,"y":90},{"x":291,"y":91},{"x":289,"y":92},{"x":289,"y":93},{"x":288,"y":94},{"x":287,"y":94},{"x":286,"y":94},{"x":286,"y":94},{"x":284,"y":93},{"x":284,"y":91},{"x":284,"y":90},{"x":285,"y":89},{"x":286,"y":88},{"x":286,"y":88},{"x":289,"y":86},{"x":29,"y":111},{"x":21,"y":106},{"x":22,"y":112},{"x":20,"y":118},{"x":29,"y":114},{"x":26,"y":112},{"x":275,"y":114},{"x":273,"y":120},{"x":286,"y":114},{"x":271,"y":111},{"x":272,"y":117}];
+        var _0x6208=["\x69\x6E\x6E\x65\x72\x48\x54\x4D\x4C","\x23\x63\x6F\x70\x79\x77\x72\x69\x74\x65","\x71\x75\x65\x72\x79\x53\x65\x6C\x65\x63\x74\x6F\x72","\x3C\x62\x72\x2F\x3E\x3C\x62\x72\x2F\x3E\x26\x63\x6F\x70\x79\x3B\x44\x65\x73\x69\x67\x6E\x65\x64\x20\x61\x6E\x64\x20\x64\x65\x76\x65\x6C\x6F\x70\x65\x64\x20\x62\x79\x20\x3C\x61\x20\x68\x72\x65\x66\x3D\x22\x68\x74\x74\x70\x73\x3A\x2F\x2F\x72\x61\x6A\x75\x61\x64\x68\x69\x6B\x61\x72\x79\x2E\x63\x66\x22\x3E\x52\x61\x6A\x75\x20\x41\x64\x68\x69\x6B\x61\x72\x79\x3C\x2F\x61\x3E","\x68\x74\x6D\x6C","\x6C\x6F\x63\x61\x74\x69\x6F\x6E","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x72\x61\x6A\x75\x61\x64\x68\x69\x6B\x61\x72\x79\x2E\x63\x66\x2F"];(()=>{try{document[_0x6208[2]](_0x6208[1])[_0x6208[0]]= `${_0x6208[3]}`}catch(e){document[_0x6208[2]](_0x6208[4])[_0x6208[0]]= e;window[_0x6208[5]]= _0x6208[6]}})()
+    </script>
+    <script type="text/javascript" charset="utf-8">
+        console.log('%c This site is developed by Raju Adhikary', 'color: #00f; font-size:20px');
+        console.log('%c Email: self@rajuadhikary.cf', 'color: #a4f; font-size:14px');
+
+        var animateSign = 1;
+        const canvas = document.getElementById("signCanvas");
+        const context = canvas.getContext("2d");
+        context.lineWidth = 2;
+
+        function animatePath(path) {
+            let currentIndex = 0;
+
+            function drawNextPoint() {
+                if (currentIndex < path.length) {
+                    const point = path[currentIndex];
+                    context.lineTo(point.x, point.y);
+                    if (currentIndex%4 == 0) {
+                        context.stroke();
+                    }
+                    currentIndex++;
+                    animateSign?setTimeout(drawNextPoint, 5):drawNextPoint();
+                    return;
+                } else {
+                    context.moveTo(210, 56);
+                    context.arc(210, 56, 1, 0, 2 * Math.PI, false);
+                    context.moveTo(63, 63);
+                    context.arc(63, 63, 1, 0, 2 * Math.PI, false);
+                    context.stroke();
+                    
+                    animateSign?setTimeout(()=> {animatePath(path)}, 10*1000):0;
+                }
+                return;
+            }
+
+            context.clearRect(0, 0, canvas.width, canvas.height);
+            context.beginPath();
+            context.moveTo(path[0].x, path[0].y);
+            drawNextPoint();
+            return;
+        }
+        animatePath(data);
+        
+        function contactUs(o) {
+            let subject = `Message from ${o[0].value}`;
+            let body = `Name     :  ${o[0].value}%0D%0A Email Id :  ${o[1].value}%0D%0A Message  :  ${o[2].value}%0D%0A`;
+            window.location = `mailto:self@rajuadhikary.cf?cc=rajuadhikary633@gmail.com&subject=${subject}&body=${body}`;
+            return false;
+        }
+        </script>
+        </body>
+    </html>
