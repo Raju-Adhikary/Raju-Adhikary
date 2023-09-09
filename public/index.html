@@ -40,6 +40,14 @@
             font-family: Raju_Adhikary;
             color: #333;
         }
+        
+        a{
+            text-decoration: none;
+        }
+        
+        h3{
+            font-size: 1.5em;
+        }
 
         .loading-container {
             position: fixed;
@@ -136,11 +144,21 @@
                 box-shadow: 0 0 0 0 rgba(47,128,237, 0);
             }
         }
-
-
+@keyframes blink {
+            0% {
+                color: #00f0;
+            }
+            50% {
+                color: #f009;
+            }
+        }
         .profile-img img {
             width: 100%;
             height: auto;
+        }
+
+        blink{
+            animation: blink 1s ease infinite;
         }
 
         .profile-img::before {
@@ -207,7 +225,7 @@
             align-items: center;
         }
 
-        .action-buttons button {
+        .action-buttons :is(button,a) {
             background-color: #2f80ed;
             color: #fff;
             border: none;
@@ -216,6 +234,7 @@
             margin: 2px 5px;
             border-radius: 10px;
             min-width: 100px;
+            font-family: serif;
             cursor: pointer;
             transition: all 0.3s ease-in-out;
         }
@@ -266,7 +285,7 @@
             </div>
             <h1>Raju Adhikary</h1>
             <p>
-                Engineer - Developer - Inventor
+                Engineer - Developer - Innovator
             </p>
         </div>
 
@@ -283,7 +302,12 @@
             </div>
             </button>
             <button href="contact-us/">Contact Me</button>
-            <button href="cv/">Learn More About Me</button>
+            <h3>Learn More About Me</h3>
+            <button href="cv/">CV 1</button>
+            <a href="cv.html">CV 2 <blink>(NEW)</blink></a>
+            <h3>Projects</h3>
+            <a href="/meet">Real time video chat</a><br/><br/><br/>
+            <a href="https://github.com/Raju-Adhikary">Other Projects <span style="font-size:0.7em">github</span></a>
         </div>
 
     </div>
