@@ -71,8 +71,16 @@
     }
     addEventListener("touchmove", (event) => {
         const touch = event.touches[0];
-        const x = Math.round(touch.clientX/1.2);
-        const y = Math.round(touch.clientY/4.5);
+        const x = Math.round(touch.clientX - canvas.offsetLeft);
+        const y = Math.round(touch.clientY - canvas.offsetTop);
+        for (let i = 0; i < 10; i++) {
+            createParticle(x, y)
+        }
+    });
+    addEventListener("touchstart", (event) => {
+        const touch = event.touches[0];
+        const x = Math.round(touch.clientX - canvas.offsetLeft);
+        const y = Math.round(touch.clientY - canvas.offsetTop);
         for (let i = 0; i < 10; i++) {
             createParticle(x, y)
         }
