@@ -23,6 +23,13 @@
 
         gtag('config', 'G-DG3FKJPWPC');
     </script>
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "medn3vh7py");
+    </script>
     <!-- Page styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <style>
@@ -352,7 +359,7 @@
     </div>
 
     <footer>
-        <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="rajuadhikary" data-description="Support me on Buy me a coffee!" data-message="" data-color="#0FF" data-position="Right" data-x_margin="25" data-y_margin="25"></script>
+        <!-- <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="rajuadhikary" data-description="Support me on Buy me a coffee!" data-message="" data-color="#0FF" data-position="Right" data-x_margin="25" data-y_margin="25"></script> -->
         <div href="https://github.com/Raju-Adhikary/" class="credit">
             <p>
                 &copy;Designed and developed by Raju Adhikary
@@ -361,10 +368,9 @@
     </footer>
     <script type="module">
         // Import the functions you need from the SDKs you need
-        import {
-            initializeApp
-        } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
-
+        import {initializeApp} from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
+        import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
+        
         // Your web app's Firebase configuration
         const firebaseConfig = {
             apiKey: "AIzaSyC3pkf8CgSd_jd8wMUaOVtk2LnLhpykzBU",
@@ -376,12 +382,15 @@
         };
 
         // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        self.fb = app;
+        initializeApp(firebaseConfig);
+        self.db = getDatabase();
+        db.ref = ref;
+        db.set = set;
     </script>
     <script type="text/javascript" charset="utf-8">
         // Code for the like button functionality
         const likeButton = $('#like-button');
+        //db.set(db.ref(db, 'likes' + userId),{})
         let liked = true; // delete after adding database
         let likes = 1790;
 
