@@ -369,7 +369,6 @@
     <script type="module">
         // Import the functions you need from the SDKs you need
         import {initializeApp} from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
-        import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
         
         // Your web app's Firebase configuration
         const firebaseConfig = {
@@ -378,55 +377,61 @@
             projectId: "portfolio-raju",
             storageBucket: "portfolio-raju.appspot.com",
             messagingSenderId: "254025371218",
-            appId: "1:254025371218:web:234ba8ac09de7f606ed98b"
+            appId: "1:254025371218:web:234ba8ac09de7f606ed98b",
+            databaseURL: "https://portfolio-raju-default-rtdb.asia-southeast1.firebasedatabase.app/"
         };
 
         // Initialize Firebase
         initializeApp(firebaseConfig);
-        self.db = getDatabase();
-        db.ref = ref;
-        db.set = set;
     </script>
-    <script type="text/javascript" charset="utf-8">
+    <script type="module">
+        import { getDatabase, ref, set, onValue} from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
+        self.db = getDatabase();
+        var dbref = ref(db, 'likes');
+        //onValue(dbref,(o)=>{return o.val()})
+        (()=>{
+            var p;
+            onValue(dbref,(o)=>{
+                likes = o.val();
+                likeUp();
+                //364
+            })
+        })()
         // Code for the like button functionality
         const likeButton = $('#like-button');
-        //db.set(db.ref(db, 'likes' + userId),{})
         let liked = true; // delete after adding database
-        let likes = 1790;
+        let likes = 0;
 
         function likeUp() {
             likes++;
-            likeButton.innerHTML = `<i class="far fa-thumbs-up"></i> ${Math.formatNumber(likes)}`;
+            likeButton.innerHTML = '<i class="far fa-thumbs-up"></i>' +Math.formatNumber(likes);
         }
         likeButton.addEventListener('click', () => {
             if (liked) {
                 likeUp();
+                set(dbref,likes)
                 $('#like-button>i').classList.replace('far', 'fa');
                 liked = false;
             } else {
-                likes -= 2;
+                likes -= 2; // -2 is to adjust like count as calling likeUp also increases 1
                 likeUp();
+                set(dbref,likes)
                 $('#like-button>i').classList.replace('fa', 'far');
                 liked = true;
             }
         });
-        let hs883u = setInterval(function() {
-            likes < Math.round(Math.random()*500)+likes-2? likeUp(): clearInterval(hs883u);
-        }, 20)
-
-
-
-
+    </script>
+    <script type="text/javascript" charset="utf-8">
         Math.formatNumber = (number) => {
             const suffixes = ['', 'K', 'M', 'B', 'T', 'Q', 'S', 'O', 'N', 'D'];
-            const suffixNum = Math.floor(('' + number).length / 3);
-
-            let shortNumber = parseFloat((suffixNum != 0 ? (number / Math.pow(1000, suffixNum)): number).toPrecision(2));
-            if (shortNumber % 1 !== 0) {
-                shortNumber = shortNumber.toFixed(1);
+            const suffixIndex = Math.floor(Math.log10(number) / 3);
+            let shortNumber = (suffixIndex != 0 ? (number/Math.pow(1e3,suffixIndex)): number).toFixed(2);
+            if (shortNumber % 1 == 0) {
+                shortNumber = Math.floor(shortNumber);
             }
-            return shortNumber + suffixes[suffixNum];
+            return shortNumber + suffixes[suffixIndex];
         }
+        
         $("*[href]").forEach(function(button) {
             const href = button.getAttribute("href");
             button.addEventListener("click", function() {
