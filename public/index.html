@@ -1,9 +1,8 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raju_Adhikary</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Raju Adhikary - Innovative Engineering Student</title>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-DG3FKJPWPC"></script>
     <script>
@@ -30,398 +29,723 @@
             y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
         })(window, document, "clarity", "script", "medn3vh7py");
     </script>
-    <!-- Page styles -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <style>
-    @font-face {
-        font-family: 'Raju_Adhikary';
-        src: url('./style/Myfont-Regular.ttf.otf') format('truetype') /* Safari, Android, iOS */
-    }
+        :root {
+            --primary-color: #0f0;
+            --secondary-color: #00f;
+            --accent-color: #00f;
+            --text-primary: #fff;
+            --text-secondary: #9aa;
+            --bg-primary: #000000;
+            --bg-secondary: #444;
+            --bg-card: #111;
+            --border-color: #333;
+            --shadow-light: 0 1px 2px rgba(0, 0, 0, 0.6);
+            --shadow-medium: 0 4px 8px rgba(0, 0, 0, 0.7);
+            --shadow-large: 0 12px 24px rgba(0, 0, 0, 0.8);
+        }
+
+
         * {
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
         }
 
         body {
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-            font-family: Raju_Adhikary;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, #1e3a8a 0%, #4c1d95 100%);
+            min-height: 100vh;
         }
         
-        a{
-            text-decoration: none;
-        }
-        
-        h3{
-            font-size: 1.5em;
-        }
-
-        .loading-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #eff;
-            z-index: 99999999;
-            animation: fade-out 3s ease-in-out forwards;
-        }
-
-@keyframes fade-out {
-            70% {
-                opacity: 1;
-            }
-            100% {
-                opacity: 0;
-                visibility: hidden;
-            }
-        }
-        .parachute {
-            width: 200px;
-            height: 300px;
-            background-image: url('parachute.png');
-            background-repeat: no-repeat;
-            background-size: contain;
-            position: absolute;
-            bottom: -200px;
-            left: 50%;
-            transform: translate(-50%, 0);
-            animation: fly 3s linear infinite;
-        }
-
-@keyframes fly {
-            0% {
-                bottom: -300px;
-                transform: translate(-50%, 0%) rotate(0deg);
-            }
-            50% {
-                transform: translate(-90%, 0%) rotate(-10deg);
-            }
-            70% {
-                transform: translate(10%, 0%) rotate(10deg);
-            }
-            100% {
-                bottom: 100%;
-                transform: translate(0%, 0%) rotate(-0deg);
-            }
-        }
-
-        header {
-            background-color: #2f80ed;
-            padding: 20px;
-            text-align: center;
-            color: #fff;
-            font-size: 24px;
-            font-weight: bold;
-        }
-        
-        #bg-container {
-            height: 100vh;
-            width: 100vw;
-            position: fixed;
-            top: 0;
-            z-index: -999;
-        }
-        #bg-container>canvas {
-            width: 100%;
-            height: 100%;
-        }
-
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 40px;
+            padding: 2rem;
         }
 
-        .profile-img {
-            display: block;
-            margin: 0 auto;
-            width: 200px;
-            height: 200px;
-            margin-top: 20px;
-            margin-bottom: 40px;
-            transform: scale(1);
-        }
-        .profile-img div:has(img){
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 2px dotted #00f;
-            animation: pulse 2s ease-in-out infinite;
-        }
-        .profile-img .wave{
-            width: calc(100% + 20px);
-            height: 100%;
-            background-color: #00f4;
-            position: absolute;
-            right: -10px;
-            border-radius: 50%;
-            animation: rotate 2s linear infinite;
-        }
-        .profile-img .wave2{
-            width: 100%;
-            height: calc(100% + 20px);
-            background-color: #00f7;
-            position: absolute;
-            top: -10px;
-            border-radius: 50%;
-            animation: rotate 2s linear infinite;
-        }
-
-@keyframes pulse {
-            0% {
-                transform: scale(1);
-                box-shadow: 0 0 0 0 rgba(47,128,237, 0.4);
-            }
-
-            70% {
-                transform: scale(1.05);
-                box-shadow: 0 0 0 10px rgba(47,128,237, 0);
-            }
-
-            100% {
-                transform: scale(1);
-                box-shadow: 0 0 0 0 rgba(47,128,237, 0);
-            }
-        }
-@keyframes rotate {
-            100% {
-                transform:  rotate(360deg);
-            }
-        }
-@keyframes blink {
-            0% {
-                color: #00f0;
-            }
-            50% {
-                color: #f009;
-            }
-        }
-        .profile-img img {
-            width: 100%;
-        }
-
-        blink{
-            animation: blink 1s ease infinite;
-        }
-
-
-        .profile-img:hover::before {
-            transform: scale(1);
-        }
-
-        .profile-info {
+        /* Header Styles */
+        .header {
             text-align: center;
+            padding: 4rem 1rem;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-large);
         }
 
-        .profile-info h1 {
-            font-size: 36px;
-            margin-bottom: 10px;
+        .profile-image {
+            position: relative;
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 2rem;
+            border-radius: 48%;
+            overflow: hidden;
+            box-shadow: 0 0 40px rgba(255, 255, 255, 0.5);
+            animation: float 30s ease-in-out infinite;
         }
 
-        .profile-info p {
-            font-size: 18px;
-            margin-bottom: 20px;
+        @keyframes float {
+          0%,100%  { transform: translate(0px, 0px); }
+          10%  { transform: translate(-80px, -90px); }
+          20%  { transform: translate(100px, -60px); }
+          30%  { transform: translate(-60px, 40px); }
+          40%  { transform: translate(50px, 100px); }
+          50%  { transform: translate(-100px, -30px); }
+          60%  { transform: translate(60px, -100px); }
+          70%  { transform: translate(-40px, 80px); }
+          80%  { transform: translate(80px, 50px); }
+          90%  { transform: translate(-70px, -70px); }
         }
 
+
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-image:hover img {
+            transform: scale(1.1);
+        }
+
+        .profile-image::before {
+            content: '';
+            position: absolute;
+            top: -4px;
+            left: -4px;
+            right: -4px;
+            bottom: -4px;
+            background: conic-gradient(from 0deg, var(--primary-color), var(--secondary-color), var(--accent-color), var(--primary-color));
+            border-radius: 50%;
+            z-index: -1;
+            animation: rotate 3s linear infinite;
+        }
+
+        @keyframes rotate {
+            100% { transform: rotate(360deg); }
+        }
+
+        .profile-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 5px 10px rgba(255, 255, 255, 0.6);
+        }
+
+        .profile-subtitle {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 1rem;
+            font-weight: 300;
+        }
+
+        .profile-description {
+            font-size: 1rem;
+            padding: 10px;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        /* Social Links */
         .social-links {
             display: flex;
             justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .social-btn {
+            display: inline-flex;
             align-items: center;
-            margin-bottom: 40px;
-        }
-
-        .social-links button {
-            display: block;
-            width: 40px;
-            height: 40px;
-            margin: 0 5px;
-            border-radius: 50%;
-            background-color: #fff;
-            color: #2f80ed;
-            line-height: 40px;
-            text-align: center;
-            font-size: 24px;
-            transition: all 0.3s ease-in-out;
-        }
-
-        .social-links button:hover {
-            background-color: #2f80ed;
-            color: #fff;
-        }
-
-        .action-buttons {
-            display: inline-block;
             justify-content: center;
-            align-items: center;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border-radius: 15px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
         }
 
-        .action-buttons :is(button,a) {
-            background-color: #2f80ed;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            font-size: 18px;
-            margin: 2px 5px;
-            border-radius: 10px;
-            min-width: 100px;
-            font-family: serif;
-            cursor: pointer;
-            transition: all 0.3s ease-in-out;
+        .social-btn:hover {
+            background: white;
+            color: var(--primary-color);
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
 
-        .action-buttons button[disabled] , .action-buttons button[disabled]:hover {
-            background-color: #ddf;
-            color: #fff;
-            border: none;
-        }
-
-        .action-buttons button:hover {
-            background-color: #fff;
-            color: #2f80ed;
-            border: 2px solid #2f80ed;
-        }
-
-        footer {
-            background-color: #f5f5f5;
-            padding: 20px;
-        }
-
-        .credit {
+        /* Action Buttons */
+        .action-buttons {
             display: flex;
             justify-content: center;
-            align-items: center;
-            font-size: 14px;
-            color: #666;
-            transition: all 0.3s ease-in-out;
+            gap: 1rem;
+            flex-wrap: wrap;
         }
 
-        .credit:hover {
-            color: #2f80ed;
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-medium);
             cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(79, 70, 229, 0.3);
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 12px 24px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            cursor: pointer;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        /* Main Content Grid */
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow-large);
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        }
+
+        .card-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1rem;
+        }
+
+        .skill-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1rem;
+            background: var(--bg-secondary);
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+        }
+
+        .skill-item:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .skill-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .skill-item:hover .skill-icon {
+            color: white;
+        }
+
+        .skill-name {
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        /* Projects */
+        .project-item {
+            padding: 1.5rem;
+            border-radius: 15px;
+            background: var(--bg-secondary);
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--primary-color);
+            transition: all 0.3s ease;
+        }
+
+        .project-item:hover {
+            background: white;
+            box-shadow: var(--shadow-medium);
+            transform: translateX(5px);
+        }
+
+        .project-title {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .project-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Education */
+        .education-item {
+            display: flex;
+            gap: 1rem;
+            padding: 1.5rem;
+            border-radius: 15px;
+            background: var(--bg-secondary);
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .education-item:hover {
+            background: white;
+            box-shadow: var(--shadow-medium);
+        }
+
+        .education-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .education-content h4 {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .education-institution {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .education-score {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* Contact Section */
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: var(--bg-secondary);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact-item:hover .contact-icon {
+            background: white;
+            color: var(--primary-color);
+        }
+
+        /* Like Button */
+        .like-section {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .like-btn {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a5a);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-medium);
+        }
+
+        .like-btn:hover {
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 10px 20px rgba(238, 90, 90, 0.3);
+        }
+
+        .like-btn.liked {
+            background: linear-gradient(135deg, #10b981, #059669);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .profile-title {
+                font-size: 2rem;
+            }
+            
+            .container {
+                padding: 1rem;
+            }
+            
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        /* Animations */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
 </head>
 <body>
-    <div id="bg-container">
-        <canvas>
-
-        </canvas>
-    </div>
-    <header>
-        Hello!! 👋
-    </header>
-    <!-- <div class="loading-container">
-        <div class="parachute"></div>
-    </div> -->
     <div class="container">
-        <div class="profile-info">
-            <div class="profile-img">
-                <div class="wave"></div>
-                <div class="wave2"></div>
-                <div>
-                    <img src="https://lh3.googleusercontent.com/-5Y4xsrp7jtw/AAAAAAAAAAI/AAAAAAAAAAA/APmPUbFw5OhtcVyf1lmLC0ECKT9wvzbxVA/s328-c/photo.jpg" alt="Profile Image">
+        <!-- Header Section -->
+        <header class="header animate__animated animate__fadeInDown">
+            <div class="profile-image">
+                <img src="https://lh3.googleusercontent.com/-5Y4xsrp7jtw/AAAAAAAAAAI/AAAAAAAAAAA/APmPUbFw5OhtcVyf1lmLC0ECKT9wvzbxVA/s328-c/photo.jpg" alt="Raju Adhikary">
+            </div>
+            
+            <h1 class="profile-title">Raju Adhikary</h1>
+            <p class="profile-subtitle">Innovative Engineering Student</p>
+            <p class="profile-description">
+                A driven Electrical Engineering student passionate about IoT, embedded systems, power electronics, and software development. Skilled at combining hardware and software to create practical, real-world solutions.
+            </p>
+            
+            <div class="social-links">
+                <a href="https://www.facebook.com/RajuAdhikary366/" class="social-btn" title="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://mobile.twitter.com/Raju_Adhikary_" class="social-btn" title="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/raju-adhikary-964220232" class="social-btn" title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/Raju-Adhikary" class="social-btn" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="tel:8609463193" class="social-btn" title="Phone">
+                    <i class="fas fa-phone"></i>
+                </a>
+                <a href="mailto:rajuadhikary633@gmail.com?subject=Interacting with Raju Adhikary&body=Start Writing here..." class="social-btn" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            
+            <div class="action-buttons">
+                <a href="RAJU_ADHIKARY.pdf" class="btn-primary">
+                    <i class="fas fa-download"></i>
+                    Download CV
+                </a>
+                <a href="contact-us/" class="btn-secondary">
+                    <i class="fas fa-paper-plane"></i>
+                    Contact Me
+                </a>
+            </div>
+        </header>
+
+        <!-- Like Section -->
+        <div class="like-section animate-on-scroll">
+            <button class="like-btn" id="like-button" data-liked="false">
+                <i class="far fa-heart"></i>
+                <span id="like-count">0</span>
+            </button>
+        </div>
+
+        <!-- Content Grid -->
+        <div class="content-grid">
+            <!-- Skills Card -->
+            <div class="card animate-on-scroll">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="card-title">Technical Skills</h3>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fab fa-python"></i></div>
+                        <div class="skill-name">Python</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fab fa-js-square"></i></div>
+                        <div class="skill-name">JavaScript</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fab fa-html5"></i></div>
+                        <div class="skill-name">HTML/CSS</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fas fa-microchip"></i></div>
+                        <div class="skill-name">Embedded</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fas fa-bolt"></i></div>
+                        <div class="skill-name">IoT</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fas fa-drafting-compass"></i></div>
+                        <div class="skill-name">AutoCAD</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fab fa-raspberry-pi"></i></div>
+                        <div class="skill-name">Raspberry Pi</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fas fa-wind"></i></div>
+                        <div class="skill-name">HVAC</div>
+                    </div>
                 </div>
             </div>
-            <h1>Raju Adhikary</h1>
-            <p>
-                Engineer - Developer
-            </p>
-        </div>
 
-        <div class="social-links">
-            <button href="https://www.facebook.com/RajuAdhikary366/"><i class="fab fa-facebook"></i></button>
-            <button href="https://mobile.twitter.com/Raju_Adhikary_"><i class="fab fa-twitter"></i></button>
-            <button href="https://www.linkedin.com/in/raju-adhikary-964220232"><i class="fab fa-linkedin"></i></button>
-            <button href="https://github.com/Raju-Adhikary"><i class="fab fa-github"></i></button>
-            <button href="tel:8609463193"><i class="fa fa-phone"></i></button>
-            <button href="mailto:rajuadhikary633@gmail.com?subject=Interacting with Raju Adhikary&body=Start Writting here...%0A-----------------------------%0A"><i class="fa fa-envelope"></i></button>
-        </div>
-        <div class="action-buttons">
-            <button data-liked="false" id="like-button"><div>
-                <i class="far fa-thumbs-up"></i>
+            <!-- Projects Card -->
+            <div class="card animate-on-scroll">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3 class="card-title">Featured Projects</h3>
+                </div>
+                <div class="project-item">
+                    <h4 class="project-title">
+                        <i class="fas fa-heartbeat" style="color: var(--primary-color); margin-right: 0.5rem;"></i>
+                        ECG Monitoring Device
+                    </h4>
+                    <p class="project-description">
+                        Designed and developed a cost-effective real-time ECG monitoring system as part of a final-year project, utilizing microcontrollers and INA integration.
+                    </p>
+                </div>
+                <div class="project-item">
+                    <h4 class="project-title">
+                        <i class="fas fa-laptop-code" style="color: var(--primary-color); margin-right: 0.5rem;"></i>
+                        Exam and Quiz Platform
+                    </h4>
+                    <p class="project-description">
+                        A fully functional web application built using HTML, CSS, and JavaScript to simulate online mock exams for technical certifications.
+                    </p>
+                </div>
+                <div class="project-item">
+                    <h4 class="project-title">
+                        <i class="fas fa-cube" style="color: var(--primary-color); margin-right: 0.5rem;"></i>
+                        CNC Plotter System
+                    </h4>
+                    <p class="project-description">
+                        Engineered a CNC plotter system using ESP32 for plotting and engraving applications.
+                    </p>
+                </div>
+                <div style="text-align: center; margin-top: 1.5rem;">
+                    <a href="https://github.com/Raju-Adhikary" class="btn-primary">
+                        <i class="fab fa-github"></i>
+                        View All Projects
+                    </a>
+                </div>
             </div>
-            </button>
-            <button href="contact-us/">Contact Me</button>
-            <h3>Learn More About Me</h3>
-            <button href="cv/">CV 1</button>
-            <a href="cv.html">CV 2 <blink>(NEW)</blink></a>
-            <h3>Projects</h3>
-            <!-- <a href="/meet">Real time video chat</a> --><br/><br/><br/>
-            <a href="https://github.com/Raju-Adhikary">Other Projects <span style="font-size:0.7em">github</span></a>
+
+            <!-- Education Card -->
+            <div class="card animate-on-scroll">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Education</h3>
+                </div>
+                <div class="education-item">
+                    <div class="education-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="education-content">
+                        <h4>Diploma in Electrical Engineering</h4>
+                        <div class="education-institution">Ranaghat Govt. Polytechnic</div>
+                        <div class="education-score">OGPA: 8 • 2022-2025</div>
+                    </div>
+                </div>
+                <div class="education-item">
+                    <div class="education-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="education-content">
+                        <h4>National Trade Certificate (ITI)</h4>
+                        <div class="education-institution">Fulia Govt. ITI</div>
+                        <div class="education-score">91.38% • 2020-2022</div>
+                    </div>
+                </div>
+                <div class="education-item">
+                    <div class="education-icon">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <div class="education-content">
+                        <h4>Secondary Education</h4>
+                        <div class="education-institution">Chakdaha Bapuji Vidyamandir</div>
+                        <div class="education-score"><!-- 52% • --> 2020</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Card -->
+            <div class="card animate-on-scroll">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-address-card"></i>
+                    </div>
+                    <h3 class="card-title">Contact Information</h3>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div href="mailto:rajuadhikary633@gmail.com?subject=Interacting with Raju Adhikary&body=Start Writing here...">
+                            <strong>Email</strong><br>
+                            rajuadhikary633@gmail.com
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div href="tel:8609463193">
+                            <strong>Phone</strong><br>
+                            +91 8609463193
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <strong>Location</strong><br>
+                            Chakdaha, West Bengal, India
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div>
+                            <strong>Website</strong><br>
+                            portfolio-raju.web.app
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
     </div>
-
+    
     <footer>
         <!-- <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="rajuadhikary" data-description="Support me on Buy me a coffee!" data-message="" data-color="#0FF" data-position="Right" data-x_margin="25" data-y_margin="25"></script> -->
         <div href="https://github.com/Raju-Adhikary/" class="credit">
             <p>
-                &copy;Designed and developed by Raju Adhikary
+                &copy; Designed and developed by <b>Raju Adhikary</b>
             </p>
         </div>
     </footer>
-    <script type="module">
-        // Import the functions you need from the SDKs you need
-        import {initializeApp} from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
-        
-        // Your web app's Firebase configuration
-        const firebaseConfig = {
-            apiKey: "AIzaSyC3pkf8CgSd_jd8wMUaOVtk2LnLhpykzBU",
-            authDomain: "portfolio-raju.firebaseapp.com",
-            projectId: "portfolio-raju",
-            storageBucket: "portfolio-raju.appspot.com",
-            messagingSenderId: "254025371218",
-            appId: "1:254025371218:web:234ba8ac09de7f606ed98b",
-            databaseURL: "https://portfolio-raju-default-rtdb.asia-southeast1.firebasedatabase.app/"
-        };
-
-        // Initialize Firebase
-        initializeApp(firebaseConfig);
-    </script>
-    <script type="module">
-        import { getDatabase, ref, set, onValue} from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
-        self.db = getDatabase();
-        var dbref = ref(db, 'likes');
-        //onValue(dbref,(o)=>{return o.val()})
-        (()=>{
-            var p;
-            onValue(dbref,(o)=>{
-                likes = o.val();
-                likeUp();
-                //364
-            })
-        })()
-        // Code for the like button functionality
-        const likeButton = $('#like-button');
-        let liked = true; // delete after adding database
-        let likes = 0;
-
-        function likeUp() {
-            likes++;
-            likeButton.innerHTML = '<i class="far fa-thumbs-up"></i>' +Math.formatNumber(likes);
-        }
-        likeButton.addEventListener('click', () => {
-            if (liked) {
-                likeUp();
-                set(dbref,likes)
-                $('#like-button>i').classList.replace('far', 'fa');
-                liked = false;
-            } else {
-                likes -= 2; // -2 is to adjust like count as calling likeUp also increases 1
-                likeUp();
-                set(dbref,likes)
-                $('#like-button>i').classList.replace('fa', 'far');
-                liked = true;
-            }
-        });
-    </script>
-    <script type="text/javascript" charset="utf-8">
+    <script>
         Math.formatNumber = (number) => {
             const suffixes = ['', 'K', 'M', 'B', 'T', 'Q', 'S', 'O', 'N', 'D'];
             const suffixIndex = Math.floor(Math.log10(number) / 3);
@@ -431,25 +755,75 @@
             }
             return shortNumber + suffixes[suffixIndex];
         }
+        // Like button functionality
+        const likeButton = document.getElementById('like-button');
+        const likeCount = document.getElementById('like-count');
+        let liked = false;
+        let count = Math.floor(Math.random() * Math.PI* 1e5) + 100; // Start with random count
+
+
+        likeCount.textContent = Math.formatNumber(count);
+
+        likeButton.addEventListener('click', function() {
+            if (!liked) {
+                liked = true;
+                count++;
+                this.classList.add('liked');
+                this.innerHTML = `<i class="fas fa-heart"></i> <span id="like-count">${Math.formatNumber(count)}</span>`;
+                this.style.transform = 'scale(1.1)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                }, 200);
+            } else {
+                liked = false;
+                count--;
+                this.classList.remove('liked');
+                this.innerHTML = `<i class="far fa-heart"></i> <span id="like-count">${Math.formatNumber(count)}</span>`;
+            }
+        });
         
-        $("*[href]").forEach(function(button) {
-            const href = button.getAttribute("href");
-            button.addEventListener("click", function() {
-                window.location.href = href;
+        
+
+        // Scroll animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
             });
         });
-        function $(s) {
-            const e = document.querySelectorAll(s);
 
-            if (e.length === 0) {
-                return null;
-            } else if (e.length === 1) {
-                return e[0];
-            } else {
-                return e;
+        // Add click handlers for buttons with href attributes
+        document.querySelectorAll('*[href]').forEach(function(button) {
+            const href = button.getAttribute('href');
+            if (href && !href.startsWith('#')) {
+                button.addEventListener('click', function(e) {
+                    if (button.tagName.toLowerCase() !== 'a') {
+                        e.preventDefault();
+                        window.open(href, '_blank');
+                    }
+                });
             }
-        }
+        });
     </script>
-    <script src="script/bg.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>

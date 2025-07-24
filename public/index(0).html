@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Raju Adhikary | Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <style>
+    body {
+      background: radial-gradient(circle at center, #1a1a1a, #000);
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .glass {
+      backdrop-filter: blur(12px);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    }
+    .hover-raise:hover {
+      transform: translateY(-3px);
+      transition: all 0.3s ease;
+    }
+    .profile-pic {
+      border-radius: 9999px;
+      border: 4px solid rgba(255, 255, 255, 0.3);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+      animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+    a {
+      transition: all 0.3s ease;
+      color: inherit;
+      text-decoration: none;
+    }
+    a:hover {
+      text-shadow: 0 0 8px rgba(0, 195, 255, 0.9);
+      color: #00c3ff;
+    }
+    .highlight {
+      color: #00ffcc;
+      font-weight: bold;
+    }
+    .glow-link {
+      text-decoration: none;
+      position: relative;
+    }
+    .glow-link:hover::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: #00c3ff;
+      box-shadow: 0 0 10px #00c3ff;
+    }
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body class="relative overflow-x-hidden">
+  <div id="tsparticles" class="absolute top-0 left-0 w-full h-full -z-10"></div>
+  <section class="min-h-screen flex items-center justify-center text-center p-6">
+    <div class="glass p-10 rounded-2xl">
+      <img src="https://portfolio-raju.web.app/profile.webp" alt="Profile" class="w-32 h-32 mx-auto mb-6 profile-pic">
+      <h1 class="text-4xl md:text-6xl font-bold mb-4">Raju Adhikary</h1>
+      <p class="text-xl md:text-2xl mb-6">Electrical Engineer • Developer • Hardware Hobbyist</p>
+      <div class="social-links">
+        <a href="https://portfolio-raju.web.app/cv.html" class="bg-blue-500 hover:bg-blue-600 px-5 py-2 rounded shadow hover-raise"><i class="ph ph-file-text mr-2"></i>CV</a>
+        <a href="https://github.com/Raju-Adhikary" class="bg-gray-800 hover:bg-gray-900 px-5 py-2 rounded shadow hover-raise"><i class="ph ph-github-logo mr-2"></i>GitHub</a>
+        <a href="https://linkedin.com/in/rajuadhikary" class="bg-blue-700 hover:bg-blue-800 px-5 py-2 rounded shadow hover-raise"><i class="ph ph-linkedin-logo mr-2"></i></a>
+        <a href="https://twitter.com/rajuadhikary" class="bg-blue-400 hover:bg-blue-500 px-5 py-2 rounded shadow hover-raise"><i class="ph ph-twitter-logo mr-2"></i></a>
+        <a href="https://instagram.com/rajuadhikary" class="bg-pink-500 hover:bg-pink-600 px-5 py-2 rounded shadow hover-raise"><i class="ph ph-instagram-logo mr-2"></i></a>
+        
+      </div>
+    </div>
+  </section>
+  <section class="p-8 max-w-5xl mx-auto">
+    <h2 class="text-3xl font-semibold mb-4">About Me</h2>
+    <div class="glass p-6 rounded-xl">
+      <p class="mb-2">Diploma student in Electrical Engineering at Ranaghat Government Polytechnic.</p>
+      <p class="mb-2">Certified in Refrigeration & AC from Fulia ITI (2020–2022).</p>
+      <p class="mb-2">Hands-on experience with embedded systems, industrial automation, and power electronics.</p>
+      <p>Skilled in circuit prototyping, microcontrollers (STM32, ESP, Raspberry Pi), and software tools relevant to electrical engineering. Also explore software development and modeling.</p>
+    </div>
+  </section>
+  <section class="p-8 max-w-5xl mx-auto">
+    <h2 class="text-3xl font-semibold mb-4">Skills</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="glass p-4 rounded-lg text-center hover-raise flex flex-col items-center">
+        <i class="ph ph-lightning skill-icon"></i>
+        Electrical Circuit Design
+      </div>
+      <div class="glass p-4 rounded-lg text-center hover-raise flex flex-col items-center">
+        <i class="ph ph-wrench skill-icon"></i>
+        PCB Design
+      </div>
+      <div class="glass p-4 rounded-lg text-center hover-raise flex flex-col items-center">
+        <i class="ph ph-cpu text-2xl mb-2"></i>
+        Embedded Systems (STM32, ESP32, Raspberry Pi)
+      </div>
+      <div class="glass p-4 rounded-lg text-center hover-raise flex flex-col items-center">
+        <i class="ph ph-lightbulb-filament text-2xl mb-2"></i>
+        Microcontroller Programming <br />
+        e.g. Arduino STM32/ESP32
+      </div>
+      <div class="glass p-4 rounded-lg text-center hover-raise flex flex-col items-center">
+        <i class="ph ph-code-simple text-2xl mb-2"></i>
+        C/C++, Python, JavaScript
+      </div>
+      <div class="glass p-4 rounded-lg text-center hover-raise flex flex-col items-center">
+        <i class="ph ph-terminal text-2xl mb-2"></i>
+        Linux/Git
+      </div>
+      <div class="glass p-4 rounded-lg text-center hover-raise flex flex-col items-center">
+        <i class="ph ph-globe-hemisphere-west text-2xl mb-2"></i>
+        Web Dev (HTML/CSS/JS)
+      </div>
+    </div>
+  </section>
+  <section class="p-8 max-w-5xl mx-auto">
+    <h2 class="text-3xl font-semibold mb-4">Projects</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="glass p-4 rounded-xl hover-raise">
+        <h3 class="text-xl font-bold flex items-center"><i class="ph ph-heartbeat mr-2"></i>MicroECG</h3>
+        <img src="https://portfolio-raju.web.app/microecg-showcase.webp" alt="MicroECG showcase" class="w-full rounded my-3">
+        <p class="text-sm mb-2">ESP8266-based ECG monitor with real-time waveform and web interface.</p>
+        <a href="https://github.com/Raju-Adhikary/MicroECG" class="glow-link text-blue-300">View on GitHub</a>
+      </div>
+      <div class="glass p-4 rounded-xl hover-raise">
+        <h3 class="text-xl font-bold flex items-center"><i class="ph ph-pen-nib mr-2"></i>CNC Plotter System</h3>
+        <p class="text-sm mb-2">Custom-built CNC machine using ESP32 and G-code interpreter.</p>
+        <a href="https://github.com/Raju-Adhikary" class="glow-link text-blue-300">View on GitHub</a>
+      </div>
+      <div class="glass p-4 rounded-xl hover-raise">
+        <h3 class="text-xl font-bold flex items-center"><i class="ph ph-file-text mr-2"></i>AITT Mock Test</h3>
+        <p class="text-sm mb-2">Simple website for mock exams, built in HTML/JS/CSS. Used by <span class="highlight">5,141 unique users</span> (as of May 2025).</p>
+        <a href="https://github.com/Raju-Adhikary" class="glow-link text-blue-300">View on GitHub</a>
+      </div>
+    </div>
+  </section>
+  <section class="p-8 max-w-3xl mx-auto">
+    <h2 class="text-3xl font-semibold mb-4">Contact</h2>
+    <div class="glass p-6 rounded-xl">
+      <p><i class="ph ph-envelope-simple mr-2"></i>Email: <a href="mailto:rajuadhikary633@gmail.com" class="glow-link text-blue-300">rajuadhikary633@gmail.com</a></p>
+      <p><i class="ph ph-phone-call mr-2"></i>Phone: <a href="tel:8609463193" class="glow-link text-blue-300">+91 8609463193</a></p>
+      <p><i class="ph ph-map-pin mr-2"></i>Location: Chakdaha, Nadia, West Bengal, India</p>
+    </div>
+  </section>
+  <footer class="text-center py-6 text-gray-500">
+    &copy; <span id="year"></span> Raju Adhikary. All rights reserved.
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
+  <script>
+    document.getElementById("year").innerText = new Date().getFullYear();
+    window.addEventListener("DOMContentLoaded", () => {
+      tsParticles.load("tsparticles", {
+        fullScreen: { enable: false },
+        background: { color: "transparent" },
+        particles: {
+          number: { value: 60 },
+          color: { value: "#ffffff" },
+          shape: { type: "circle" },
+          opacity: { value: 0.3 },
+          size: { value: 2 },
+          links: { enable: true, distance: 150, color: "#ffffff", opacity: 0.4, width: 1 },
+          move: { enable: true, speed: 0.5 }
+        },
+        interactivity: {
+          events: { onhover: { enable: true, mode: "repulse" } },
+          modes: { repulse: { distance: 100 } }
+        }
+      });
+    });
+  </script>
+</body>
+</html>

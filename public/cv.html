@@ -108,6 +108,7 @@
             margin-top: 20px;
             font-size: 0.9rem;
         }
+        
 
 @media screen and (max-width: 768px) {
             table {
@@ -123,6 +124,14 @@
                 margin-bottom: 20px;
             }
         }
+@media print {
+            button, tr:has(form) {
+                display: none;
+            }
+            .my_photo{
+            max-width: 25mm;
+            }
+}
     </style>
 </head>
 <body>
