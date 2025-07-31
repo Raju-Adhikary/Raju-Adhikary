@@ -21,8 +21,8 @@
 <h3 align="left">Tech I Play With:</h3>
 <p align="left">
   <a href="https://www.arduino.cc/" target="_blank"><img src="https://cdn.worldvectorlogo.com/logos/arduino-1.svg" width="40" alt="Arduino" /></a>
-  <a href="https://www.st.com/en/microcontrollers-microprocessors/stm32-32-bit-arm-cortex-mcus.html" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/STMicroelectronics_logo.svg" width="40" alt="STM32" /></a>
-  <a href="https://www.espressif.com/en/products/socs/esp32" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Espressif_ESP32.svg/512px-Espressif_ESP32.svg.png" width="40" alt="ESP32" /></a>
+  <a href="https://www.st.com/en/microcontrollers-microprocessors/stm32-32-bit-arm-cortex-mcus.html" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT58IF6kh1WbnTw5iamPlF_UNXmRmqseL6RoQ&usqp=CAU" width="40" alt="STM32" /></a>
+  <a href="https://www.espressif.com/en/products/socs/esp32" target="_blank"><img src="https://www.espressif.com/sites/all/themes/espressif/images/esp32-c61/icon-modules-mobile.png" width="40" alt="ESP32" /></a>
   <a href="https://www.raspberrypi.com/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/en/c/cb/Raspberry_Pi_Logo.svg" width="40" alt="Raspberry Pi" /></a>
   <a href="https://www.python.org/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" width="40" alt="Python" /></a>
   <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" width="40" alt="JavaScript" /></a>
